@@ -207,11 +207,8 @@ export default function Conceptos({ id_seccion }) {
                   {concepto.links_youtube &&
                     concepto.links_youtube.length !== 0 &&
                     concepto.links_youtube.map((item, itemIndex) => (
-                      <Tooltip content={item.video}>
-                        <div
-                          key={itemIndex}
-                          className="bg-pink-50 rounded-2xl hover:shadow-purple-900 shadow-2xl cursor-pointer"
-                        >
+                      <Tooltip content={item.video} key={itemIndex}>
+                        <div className="bg-pink-50 rounded-2xl hover:shadow-purple-900 shadow-2xl cursor-pointer">
                           {/* 
                           <Typography variant="lead" color="deep-purple">
                             {item.video}
@@ -240,11 +237,8 @@ export default function Conceptos({ id_seccion }) {
                   {concepto.links_pdf &&
                     concepto.links_pdf.length !== 0 &&
                     concepto.links_pdf.map((item, itemIndex) => (
-                      <Tooltip content={item.pdf}>
-                        <div
-                          key={itemIndex}
-                          className="bg-pink-50 rounded-2xl hover:shadow-purple-900 shadow-2xl cursor-pointer"
-                        >
+                      <Tooltip content={item.pdf} key={itemIndex}>
+                        <div className="bg-pink-50 rounded-2xl hover:shadow-purple-900 shadow-2xl cursor-pointer">
                           {/* 
                           <Typography variant="lead" color="deep-purple">
                             {item.video}
@@ -279,36 +273,13 @@ export default function Conceptos({ id_seccion }) {
           </Button>
           <Collapse open={openCalculadora}>
             <Card className="my-4 mx-auto w-full h-full">
-              <CardBody>
-                {/*
-          a pesar del nombre el componente es igual para todos xd 
-          <Calc_tendria_central
-                  idseccion={id_seccion}
-                  tituloCal={concepto.title}
-                />
-           */}
-                {renderComponent()}
-              </CardBody>
+              <CardBody>{renderComponent()}</CardBody>
             </Card>
           </Collapse>
         </CardBody>
       </>
 
-      <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4">
-        {/* 
-        <Typography variant="small" color="blue-gray" className="font-normal">
-          Pagina 1 de 6
-        </Typography>
-        <div className="flex gap-2">
-          <Button variant="gradient" size="sm" color="deep-purple">
-            Anterior
-          </Button>
-          <Button variant="gradient" size="sm" color="deep-purple">
-            Siguiente
-          </Button>
-        </div>
-        */}
-      </CardFooter>
+      <CardFooter className="flex items-center justify-between border-t border-blue-gray-50 p-4"></CardFooter>
     </Card>
   );
 }

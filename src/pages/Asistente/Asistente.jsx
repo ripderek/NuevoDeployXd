@@ -129,6 +129,7 @@ export default function Asistente({ cerrar, id_seccion1 }) {
                 concepto.pasos.length !== 0 &&
                 concepto.pasos.map((item, itemIndex) => (
                   <Step
+                    key={item.paso}
                     onClick={() => (
                       setActiveStep(item.paso - 1),
                       ObtenerContenidoPaso(item.paso)
