@@ -24,19 +24,16 @@ import {
   Collapse,
   Checkbox,
 } from "@material-tailwind/react";
-import { Dialog_Error, Loader, Notification } from "@/widgets"; //Importar el componente
 import { tasks } from "../../Data/Conceptos";
 
-import {
-  Calc_tendria_central,
-  Calc_Bernoulli,
-  Calc_Poisson,
-  Calc_Binomial,
-  Calc_Normal,
-  Calc_Bayes,
-  Frecuencia,
-} from "@/pages/Calc";
-import { Asistente } from "@/pages/Asistente";
+import { Calc_tendria_central } from "@/pages/Calc/Calc_tendria_central";
+import { Calc_Bernoulli } from "@/pages/Calc/Calc_Bernoulli";
+import { Calc_Poisson } from "@/pages/Calc/Calc_Poisson";
+import { Calc_Binomial } from "@/pages/Calc/Calc_Binomial";
+import { Calc_Normal } from "@/pages/Calc/Calc_Normal";
+import { Calc_Bayes } from "@/pages/Calc/Calc_Bayes";
+import { Frecuencia } from "@/pages/Calc/Frecuencia";
+import { Asistente } from "@/pages/Calc/Asistente/Asistente";
 
 //const TABLE_HEAD = ["Member", "Function", "Status", "Employed", ""];
 import { useEffect, useState } from "react";

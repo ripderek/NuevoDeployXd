@@ -1,11 +1,10 @@
 import { IconButton } from "@material-tailwind/react";
 import { Cog6ToothIcon } from "@heroicons/react/24/solid";
 import { Dialog_Error, Loader } from "@/widgets";
-import {
-  BarraNavegacion2,
-  Navbar_app,
-  Configurator,
-} from "@/components/layout";
+import BarraNavegacion2 from "@/components/layout/BarraNavegacion2";
+import Navbar_app from "@/components/layout/Navbar_app";
+import Configurator from "@/components/layout/Configurator";
+
 //rutas que va a tener la barra lateral
 import routes from "@/routes";
 import {
