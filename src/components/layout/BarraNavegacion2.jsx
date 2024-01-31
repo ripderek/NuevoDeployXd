@@ -22,7 +22,9 @@ export function BarraNavegacion2({ routes, brandImg, brandName }) {
   const [controller, dispatch] = useMaterialTailwindController();
   const { sidenavColor, sidenavType, openSidenav } = controller;
   // Define la lógica para determinar si un enlace está activo
-  const isActive = (path) => useRouter().pathname === path;
+  const router = useRouter();
+
+  const isActive = (path) => router.pathname === path;
   const sidenavTypes = {
     dark: "bg-pink-500",
     white: "bg-pink-100 shadow-sm",
